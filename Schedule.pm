@@ -1,6 +1,5 @@
 # (c) 2003-2020 Vlado Keselj http://web.cs.dal.ca/~vlado
 #
-# $Id: Schedule.pm 239 2016-02-19 15:37:48Z vlado $
 # <? read_starfish_conf(); !>
  
 package Calendar::Schedule;

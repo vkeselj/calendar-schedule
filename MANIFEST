@@ -1,5 +1,6 @@
 MANIFEST           # This file
 ChangeLog          # Changes
+README
 Makefile.PL        # Makefile generator
 META.yml           # Meta-information
 Schedule.pm        # Main module

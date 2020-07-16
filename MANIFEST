@@ -1,6 +1,8 @@
-ChangeLog
-MANIFEST
-Makefile.PL
-META.yml
-Schedule.pm
-t/01.t
+MANIFEST           # This file
+ChangeLog          # Changes
+Makefile.PL        # Makefile generator
+META.yml           # Meta-information
+Schedule.pm        # Main module
+t/01.t             # Test case 01
+t/01-example1      # Test input
+t/01-example1.html # Test expected output

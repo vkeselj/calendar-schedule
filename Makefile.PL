@@ -27,7 +27,7 @@ WriteMakefile (
 
 open(M, ">>Makefile") or die;
 
-if ( -f 'priv.make' ) { print M getfile('priv.make') }
+if ( -f 'priv.make' ) { print M &getfile('priv.make') }
 
 close(M);
 

@@ -1,7 +1,8 @@
 Revision history for Perl extension Calendar::Schedule.
 
-1.08
+1.08  Thu Jul 16 06:47:58 ADT 2020
 	- documentation improvements
+	- added test t/01.t t/01-example1
 
 1.07  Fri Feb 19 11:32:35 AST 2016
 	- documentation improvements
@@ -59,5 +60,6 @@ Revision history for Perl extension Calendar::Schedule.
 	- added support for :until
 	- improved date format, e.g.: 1-Jul-2005
 
-0.01  2002 (some time)
+0.01  2002  Vlado Keselj vlado@dnlp.ca
 	- initial version
+	- coding started in 2000, 5 Jun 2020, but the module was not named

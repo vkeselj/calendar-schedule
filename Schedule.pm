@@ -1,7 +1,10 @@
-# (c) 2003-2020 Vlado Keselj http://web.cs.dal.ca/~vlado
+# Calendar::Schedule - Manage calendar schedules
+# (c) 2003-2020 Vlado Keselj http://web.cs.dal.ca/~vlado vlado@dnlp.ca
+#               and contributing authors
 #
-# <? read_starfish_conf(); !>
- 
+# Some parts are updated with Starfish during development, such as the version
+# number: <? read_starfish_conf !>
+
 package Calendar::Schedule;
 use strict;
 require Exporter;
@@ -14,10 +17,8 @@ our %EXPORT_TAGS = ( 'all' => [ qw( parse_time ) ] );
 our @EXPORT_OK = ( @{ $EXPORT_TAGS{'all'} } );
 our @EXPORT = qw(new);
 
-#<?echo "our \$VERSION = '$Meta->{version}';"!>
-#+
-our $VERSION = '1.08';
-#-
+#<?echo "our \$VERSION = '$Meta->{version}';"!>#+
+our $VERSION = '1.08';#-
 
 use vars qw($Version $Revision);
 $Version = $VERSION;
@@ -25,14 +26,13 @@ $Version = $VERSION;
 
 # non-exported package globals
 use vars qw( $REweekday3 $REmonth3 $RE1st );
-
 $RE1st = qr/first|second|third|fourth|fifth|last|1st|2nd|3rd|4th|5th/;
 $REweekday3 = qr/Mon|Tue|Wed|Thu|Fri|Sat|Sun/;
 $REmonth3 = qr/Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec/;
 
 =head1 NAME
 
-Calendar::Schedule - for managing calendar schedules
+Calendar::Schedule - Manage calendar schedules
 
 =head1 SYNOPSIS
 
@@ -1247,6 +1247,14 @@ sub is_week_in_month {
     return 0;
 }
 
+=pod
+
+=head2 weekday_to_digits
+
+For example, changes all words "SUNDAY", "Sunday", "SUN", or "Sun" to "00", etc.
+
+=cut
+
 sub weekday_to_digits {
     local $_ = shift;
     s/\b(?:SUN?(?:DAY)?|Sun(?:day)?)\b/00/g;
@@ -1401,18 +1409,19 @@ F<http://web.cs.dal.ca/~vlado/srcperl/Calendar-Schedule/>.
 
 =head1 SEE ALSO
 
-There are at least one and probably many Perl modules for different types of calendar,
-and likely many more in other programming languages.  The reason for creation of this one
-is that no existing ones included some particular features needed.  This should be
-re-examined.  Below is one module included:
+There are some Perl modules for different types of calendar, and
+likely may more in other programming languages.  I could not find any
+existing calendars including the particular features that I needed, so
+this module was created.  Below are some modules with similar
+functionality:
 
 =over 4
 
 =item [HTML::CalendarMonthSimple] - Perl Module for Generating HTML Calendars
 
-The module is written as a simplifed version of HTML::CalendarMonth.  The intention for this,
-Calendar::Schedule module, is not to tie it essentially for HTML.  The events specification is
-described in a simple textual format.
+The module is written as a simplifed version of HTML::CalendarMonth.
+The intention for this, Calendar::Schedule module, is not to tie it essentially
+for HTML.  The events specification is described in a simple textual format.
 
 =item [HTML::CalendarMonth] - Generate and manipulate HTML calendar months
 

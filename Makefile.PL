@@ -7,13 +7,8 @@ my $name   = 'Schedule.pm';
 WriteMakefile (
    'NAME'       => $module,
    'VERSION_FROM' => $name, # finds $VERSION
-   'dist' => { COMPRESS=>"gzip",
-               SUFFIX=>"gz",
-               PREOP=>('starfish README; '.
-                       "cp -f README $dir-\$(VERSION); "
-                      ),
-             },
-   'clean' => {FILES => "tmp* testfiles/tmp1 Calendar *~ t/tmp1"},
+   'dist' => { COMPRESS=>"gzip", SUFFIX=>"gz" },
+   'clean' => {FILES => "tmp* Calendar *~"},
    'PREREQ_PM' => {
 		   # Foo::Ey => '1.00',
 		  },

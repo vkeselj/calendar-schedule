@@ -1,5 +1,8 @@
 Revision history for Perl extension Calendar::Schedule.
 
+1.09  Thu Jul 16 09:16:35 ADT 2020
+	- fixing bug: adding t/test-lib.pl to MANIFEST
+
 1.08  Thu Jul 16 06:47:58 ADT 2020
 	- documentation improvements
 	- added test t/01.t t/01-example1

@@ -4,6 +4,7 @@ README
 Makefile.PL        # Makefile generator
 META.yml           # Meta-information
 Schedule.pm        # Main module
+t/test-lib.pl	   # Helpful testing functions
 t/01.t             # Test case 01
 t/01-example1      # Test input
 t/01-example1.html # Test expected output

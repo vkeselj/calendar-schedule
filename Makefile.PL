@@ -9,6 +9,7 @@ WriteMakefile (
    'VERSION_FROM' => $name, # finds $VERSION
    'dist' => { COMPRESS=>"gzip", SUFFIX=>"gz" },
    'clean' => {FILES => "tmp* Calendar *~"},
+   'LICENSE' => 'perl',
    'PREREQ_PM' => {
 		   # Foo::Ey => '1.00',
 		  },

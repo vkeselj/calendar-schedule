@@ -18,8 +18,15 @@ WriteMakefile (
     (ABSTRACT_FROM => $name, # retrieve abstract from module
      AUTHOR     => 'Vlado Keselj web.cs.dal.ca/~vlado') : 
     ()
-    ),
-   );
+   ),
+   (eval { ExtUtils::MakeMaker->VERSION(6.46) } ? (META_MERGE => {
+     'meta-spec' => { version => 2} ,
+     resources => {
+       repository => {
+         type => 'git',
+	 url => 'https://github.com/vkeselj/calendar-schedule.git',
+         web => 'https://github.com/vkeselj/calendar-schedule',
+	 }}}):() ));
 
 open(M, ">>Makefile") or die;
 

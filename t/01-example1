@@ -2,7 +2,9 @@
 #use Calendar::Schedule;
 
 my $cal = Calendar::Schedule->new();
-$cal->{ColLabel} = "%A"; # use only day of the week as the column label
+#$cal->{ColLabel} = "%A"; # use only day of the week as the column label
+$cal->{ColLabel} = "Week day %u";  # We cannot use %A for testing purposes
+                          # since it # depends on the current locale setting
 
 # Example meetings with overlaps
 $cal->add_entries(<<'EOT');

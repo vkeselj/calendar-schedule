@@ -3,6 +3,7 @@ ChangeLog          # Changes
 README
 Makefile.PL        # Makefile generator
 META.yml           # Meta-information
+LICENSE
 Schedule.pm        # Main module
 t/test-lib.pl	   # Helpful testing functions
 t/01.t             # Test case 01

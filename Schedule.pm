@@ -1,5 +1,5 @@
 # Calendar::Schedule - Manage calendar schedules
-# (c) 2003-2020 Vlado Keselj http://web.cs.dal.ca/~vlado vlado@dnlp.ca
+# (c) 2002-2020 Vlado Keselj http://web.cs.dal.ca/~vlado vlado@dnlp.ca
 #               and contributing authors
 #
 # Some parts are updated with Starfish during development, such as the version
@@ -18,7 +18,7 @@ our @EXPORT_OK = ( @{ $EXPORT_TAGS{'all'} } );
 our @EXPORT = qw(new);
 
 #<?echo "our \$VERSION = '$Meta->{version}';"!>#+
-our $VERSION = '1.09';#-
+our $VERSION = '1.10';#-
 
 use vars qw($Version $Revision);
 $Version = $VERSION;
@@ -1393,19 +1393,20 @@ __END__
 =head1 THANKS
 
 I would like to thank Stefan Goebel for his report and detailed
-analysis of a bug and suggestions, and Mike Vasiljevs for his
-suggestions and patches for ISO8601 format.
+analysis of a bug and suggestions, Mike Vasiljevs for his
+suggestions and patches for ISO8601 format, and Mohammad S Anwar for
+correction regarding missing license field.
 
 =head1 AUTHOR
 
-Copyright 2003-2020 Vlado Keselj, vlado@dnlp.ca, http://web.cs.dal.ca/~vlado
+Copyright 2002-2020 Vlado Keselj, vlado@dnlp.ca, http://web.cs.dal.ca/~vlado
 
 This script is provided "as is" without expressed or implied warranty.
-This is free software; you can redistribute it and/or modify it under
+This is free software; you can redistribute it, modify it, or both under
 the same terms as Perl itself.
 
 The latest version can be found at
-F<http://web.cs.dal.ca/~vlado/srcperl/Calendar-Schedule/>.
+L<http://web.cs.dal.ca/~vlado/srcperl/Calendar-Schedule/>.
 
 =head1 SEE ALSO
 

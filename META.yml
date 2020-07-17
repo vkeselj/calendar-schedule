@@ -1,7 +1,7 @@
 --- #YAML:1.0
 name: Calendar::Schedule
 abstract: manage calendar schedules
-version: 1.10
+version: 1.11
 authored_by:
   - Vlado Keselj http://web.cs.dal.ca/~vlado
 license: perl

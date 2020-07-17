@@ -18,7 +18,7 @@ our @EXPORT_OK = ( @{ $EXPORT_TAGS{'all'} } );
 our @EXPORT = qw(new);
 
 #<?echo "our \$VERSION = '$Meta->{version}';"!>#+
-our $VERSION = '1.10';#-
+our $VERSION = '1.11';#-
 
 use vars qw($Version $Revision);
 $Version = $VERSION;
@@ -32,7 +32,7 @@ $REmonth3 = qr/Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec/;
 
 =head1 NAME
 
-Calendar::Schedule - Manage calendar schedules
+Calendar::Schedule - manage calendar schedules
 
 =head1 SYNOPSIS
 
@@ -46,13 +46,13 @@ Calendar::Schedule - Manage calendar schedules
     # reading entries from a file
     $TTable->add_entries_from("$ENV{'HOME'}/.calendar");
 
-    # producing entries in HTML tables
+    # producing entries in HTML tables, one table per week
     $TTable->set_first_week('now');
     print "<p>\n" . $TTable->generate_table();
     print "<p>\n" . $TTable->generate_table();
     print "<p>\n" . $TTable->generate_table();
 
-    # etc.  See EXAMPLES section
+    # for more examples, see EXAMPLES section
 
 The file .calendar may look like this:
 
@@ -76,10 +76,26 @@ The file .calendar may look like this:
 
 =head1 DESCRIPTION
 
-Description ...
+The module is created with a purpose to provide functionality for handling a
+personal calendar schedule in a transparent and simple way.  The calendar
+data is assumed to be kept in a plain file in a format easy to edit and
+understand.  It was inspired by the C<calendar> program on older Unix-like
+systems, which used C<~/.calendar> file to produce entries for each day
+and send them in the morning by email.
 
-Attempted to match the internal data representation with the iCalendar
-standard (RFC2445).  Examples of the iCalendar fields: DTSTART, DTEND, SUMMARY,
+Inspired by the C<~/.calendar> file, the format for recording scheduled
+events is very simple, mostly contained in one line of text.
+
+The module currently supports generation of HTML weekly tables with visual
+representation of scheduled events.  The generated table is generated in
+a simple HTML table, with a use of C<colspan> and C<rolspan> attributes to
+represent overlapping events in parallel in the table.
+
+=head2 Planned Future Work
+
+In the development of the recording format for the event, there is an attempt
+to model the data representation of the iCalendar standard (RFC2445).
+Examples of the iCalendar fields are: DTSTART, DTEND, SUMMARY,
 RRULE (e.g. RRULE:FREQ=WEEKLY, RRULE:FREQ=WEEKLY;INTERVAL=2 for
 biweekly, RRULE:FREQ=WEEKLY;UNTIL=20040408 ) etc.
 More examples:

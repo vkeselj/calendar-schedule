@@ -1,5 +1,8 @@
 Revision history for Perl extension Calendar::Schedule.
 
+1.12 current version under development
+ - documentation improvements
+
 1.11 Fri Jul 17 17:10:35 ADT 2020
  - documentation improvements
  - trying to make test more portable, replacing %u with %w

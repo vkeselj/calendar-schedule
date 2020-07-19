@@ -1,5 +1,6 @@
 #!/usr/bin/perl
 use Test::More;
+use lib '.';
 require "t/test-lib.pl";
 
 use_ok("Calendar::Schedule", ':all');

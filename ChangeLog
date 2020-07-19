@@ -1,7 +1,9 @@
 Revision history for Perl extension Calendar::Schedule.
 
-1.12 current version under development
+1.12 Sun Jul 19 17:52:16 ADT 2020
  - documentation improvements
+ - fixing a testing problem: added "use lib '.';' in t/01.t to make sure
+   that 'require "t/test-lib.pl";' works
 
 1.11 Fri Jul 17 17:10:35 ADT 2020
  - documentation improvements

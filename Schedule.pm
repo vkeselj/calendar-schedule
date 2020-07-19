@@ -18,7 +18,7 @@ our @EXPORT_OK = ( @{ $EXPORT_TAGS{'all'} } );
 our @EXPORT = qw(new);
 
 #<?echo "our \$VERSION = '$Meta->{version}';"!>#+
-our $VERSION = '1.12';#-
+our $VERSION = '1.13';#-
 
 use vars qw($Version $Revision);
 $Version = $VERSION;

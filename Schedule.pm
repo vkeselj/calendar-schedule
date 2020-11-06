@@ -18,7 +18,7 @@ our @EXPORT_OK = ( @{ $EXPORT_TAGS{'all'} } );
 our @EXPORT = qw(new);
 
 #<?echo "our \$VERSION = '$Meta->{version}';"!>#+
-our $VERSION = '1.14';#-
+our $VERSION = '1.15';#-
 
 # non-exported package globals
 use vars qw( $REweekday3 $REmonth3 $RE1st );
@@ -1411,7 +1411,8 @@ correction regarding missing license field.
 
 =head1 AUTHOR
 
-Copyright 2002-2020 Vlado Keselj, vlado@dnlp.ca, http://web.cs.dal.ca/~vlado
+Copyright 2002-2020 Vlado Keselj, vlado@dnlp.ca, http://vlado.ca,
+and Contributors (section THANKS).
 
 This script is provided "as is" without expressed or implied warranty.
 This is free software; you can redistribute it, modify it, or both under

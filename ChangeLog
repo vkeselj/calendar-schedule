@@ -1,5 +1,8 @@
 Revision history for Perl extension Calendar::Schedule.
 
+1.15 Fri Nov  6 15:29:10 AST 2020
+ - documentation improvements, minor fixes of the README file
+
 1.14 Fri Nov  6 14:43:54 AST 2020
  - documentation improvements
  - removing $Revision and $Version variables

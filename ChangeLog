@@ -1,7 +1,13 @@
 Revision history for Perl extension Calendar::Schedule.
 
+1.14 Fri Nov  6 14:43:54 AST 2020
+ - documentation improvements
+ - removing $Revision and $Version variables
+ - added bin/cal2html program
+ - added t/02.t test with sample input and output
+
 1.13 Sun Jul 19 18:07:08 ADT 2020
- - documentation (ChangeLog) mistake in 1.12
+ - fix documentation (ChangeLog) mistake in 1.12
 
 1.12 Sun Jul 19 17:52:16 ADT 2020
  - documentation improvements
@@ -88,3 +94,7 @@ Revision history for Perl extension Calendar::Schedule.
 0.01 2002  Vlado Keselj vlado@dnlp.ca
  - initial version
  - coding started in 2000, 5 Jun 2002, but the module was not named
+ - Emacs settings:
+ # Local Variables:
+ # mode: Fundamental;
+ # End:

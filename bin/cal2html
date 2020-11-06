@@ -1,0 +1,9 @@
+#!/usr/bin/perl
+# cal2html - generate HTML from a calendar schedule
+
+use Calendar::Schedule qw/:all/;
+
+my $TTable = Calendar::Schedule->new();
+while (<>) { $TTable->add_entries($_); }
+$TTable->set_first_week('now');
+print "<html><body>\n<p>\n" . $TTable->generate_table();

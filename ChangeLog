@@ -1,5 +1,8 @@
 Revision history for Perl extension Calendar::Schedule.
 
+1.16 Fri Nov  6 15:50:06 AST 2020
+ - add script bin/cal2html to EXE_FILES in Makefile.PL
+
 1.15 Fri Nov  6 15:29:10 AST 2020
  - documentation improvements, minor fixes of the README file
 

@@ -1,5 +1,11 @@
 Revision history for Perl extension Calendar::Schedule.
 
+1.17 Sat Nov  7 10:16:22 AST 2020
+ - thanks to Gabor Szabo for GitHub PR to add files for CI
+ - thanks to Slaven Rezic for reporting the bug re locale
+   The bug is fixed by setting LC_ALL=C just for test t/02.t
+ - documentation improvements
+
 1.16 Fri Nov  6 15:50:06 AST 2020
  - add script bin/cal2html to EXE_FILES in Makefile.PL
 

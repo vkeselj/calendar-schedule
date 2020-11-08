@@ -1,5 +1,12 @@
 Revision history for Perl extension Calendar::Schedule.
 
+1.18 Sun Nov  8 15:33:57 AST 2020
+ - fixing bug in test t/02.t; added an option to bin/cal2html to make
+   the test independent of locale and the current date
+ - added option --ColLabel to cal2html to specify column label
+ - test t/02.t now uses "cal2html --ColLabel='weekday %w'" to avoid depending
+   on local weekday names, and the current time
+
 1.17 Sat Nov  7 10:16:22 AST 2020
  - thanks to Gabor Szabo for GitHub PR to add files for CI
  - thanks to Slaven Rezic for reporting the bug re locale

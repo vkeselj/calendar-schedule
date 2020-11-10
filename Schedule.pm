@@ -18,7 +18,7 @@ our @EXPORT_OK = ( @{ $EXPORT_TAGS{'all'} } );
 our @EXPORT = qw(new);
 
 #<?echo "our \$VERSION = '$Meta->{version}';"!>#+
-our $VERSION = '1.18';#-
+our $VERSION = '1.19';#-
 
 # non-exported package globals
 use vars qw( $REweekday3 $REmonth3 $RE1st );
@@ -1205,8 +1205,10 @@ sub generate_table {
 		  @ind1 = (\%eprep, $di, $self->{'RowLabels'}[$j], $oi) if $oi > 0;
 		  
 		  if ($oi == 0) {
-		      while ($j <= $num_of_timelabels-1 &&
-			     $self->_table_get(\%eprep, $di, $self->{'RowLabels'}[$j]) eq 'continue')
+		    while ($j <= $num_of_timelabels-1 &&
+			   $self->_table_get(\%eprep, $di,
+					     $self->{'RowLabels'}[$j]) eq
+			   'continue')
 		      { ++ $counter; ++$j }
 		  } else {
 		      while ($j <= $num_of_timelabels-1 &&
@@ -1382,8 +1384,9 @@ sub _table_get {
     my $epr = shift;
     my $col = shift;
     my $row = shift;
-    my $overlap = shift;
-    return $overlap > 0 ? $epr->{$col, $row, $overlap} : $epr->{$col, $row};
+    my $overlap = shift // 0;
+    my $ret = $overlap > 0 ? $epr->{$col, $row, $overlap} : $epr->{$col, $row};
+    return defined($ret) ? $ret : '';
 }
 
 =pod

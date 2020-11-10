@@ -1,5 +1,10 @@
 Revision history for Perl extension Calendar::Schedule.
 
+1.19 Tue Nov 10 06:54:28 AST 2020
+ - addressing some issues reported by testers, thanks to Alexandr Ciornii
+   1. use of uninitialize value in comparisons, lines 1386 and 1208
+   2. issue with Windows behaviour (spliting CL arguments within quotes)
+
 1.18 Sun Nov  8 15:33:57 AST 2020
  - fixing bug in test t/02.t; added an option to bin/cal2html to make
    the test independent of locale and the current date
